@@ -48,15 +48,15 @@ MediLocker is a cutting-edge platform designed to securely store medical records
 - `Huggingface - Mistral 8x7B`
 - `flask_cors`
 
+## Overview Video
+[Insert Link to Overview Video]
+
 ## Features
 - **Secure Storage**: Store medical records securely on the blockchain to ensure data integrity and immutability.
 - **Privacy Protection**: Safeguard sensitive medical data with encryption and access controls.
 - **Accessibility**: Access medical records anytime, anywhere, with permissioned access for both patients and authorized healthcare professionals.
 - **Real-Time Query Resolution**: Integrated chatbot and RAG model provide real-time resolution for queries and doubts.
 - **Tamper-Proof**: Utilizes blockchain technology to create an immutable audit trail, reducing the risk of data tampering or unauthorized changes.
-
-## Overview Video
-[Insert Link to Overview Video]
 
 ## Block Diagram
 ![MediLocker Block Diagram](https://github.com/Adii2202/MediLocker/assets/131331573/ecfdc5c8-f8a2-48ed-a4e1-3c5970cfaef5)
