@@ -3,8 +3,7 @@
 MedBlock is a secure platform that enables users to store their medical records securely on the blockchain. With the power of blockchain technology, MedBlock ensures the integrity, confidentiality, and accessibility of medical records, providing patients and healthcare providers with a reliable and tamper-proof solution for managing health data.
 
 ## Block Diagram
-
-![WhatsApp Image 2024-04-14 at 11 53 54_b7a2f9a6](https://github.com/Adii2202/MediLocker/assets/131331573/37fc07cd-3e46-4ff1-9608-9ebd6a0c33f0)
+![medilocker](https://github.com/Adii2202/MediLocker/assets/131331573/76be5157-f8d7-417d-9aea-40a870748386)
 
 ## Features
 
