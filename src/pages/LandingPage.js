@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
-
+import Modal from 'react-modal';
 import Accessibility from "../assets/LandingPage/Accessibility.svg";
 import BlockchainIllustration from "../assets/LandingPage/BlockchainIllustration.svg";
 import PaperLess from "../assets/LandingPage/PaperLess.svg";
@@ -53,8 +53,25 @@ const LandingPage = () => {
   const loginRef = useRef();
   const auth = useAuth();
   const history = useHistory();
-
+  const [modalState, setModalState] = useState(false);
   const [menu, setMenu] = useState(false);
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const uploadClickHandler = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    // Handle the file upload here
+    console.log(file);
+    closeModal();
+  };
 
   const scrollToLoginFlex = () => ref.current.scrollIntoView();
   const scrollToLoginFlexMobile = () => {
@@ -74,16 +91,64 @@ const LandingPage = () => {
       <NavbarContainer>
         <Logo />
         <AppName>MediLocker</AppName>
+        
         <Home onClick={() => history.push("/home")}>
           Home
           <BlueLine />
         </Home>
         <About onClick={() => history.push("/about")}>About</About>
+        
         {auth.loggedIn ? (
           <Login onClick={() => history.push("/dashboard")}>Dashboard</Login>
         ) : (
           <Login onClick={scrollToLoginFlex}>Login</Login>
         )}
+        <div>
+      <Home onClick={uploadClickHandler}>
+        Chat With Pdf
+      </Home>
+      <Modal
+  isOpen={modalIsOpen}
+  onRequestClose={closeModal}
+  contentLabel="File Upload Modal"
+  style={{
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '50%',
+      height: '50%',
+    },
+  }}
+>
+  <div style={{
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '20px',
+    padding: '20px',
+    backgroundColor: '#f5f5f5',
+    borderRadius: '10px',
+  }}>
+    <h2 style={{ textAlign: 'center' }}>Upload PDF</h2>
+    <button style={{
+      padding: '10px 20px',
+      backgroundColor: '#007BFF',
+      color: 'white',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      textAlign: 'center', // Added this
+    }} onClick={closeModal}>close</button>
+    <input type="file" accept=".pdf" onChange={handleFileUpload} />
+  </div>
+</Modal>
+    </div>
+
         <MenuContainer open={menu}>
           <Menu onClick={() => setMenu(!menu)}></Menu>
           <Dropdown>
