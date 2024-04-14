@@ -1,4 +1,8 @@
-# ![MedblockLogo](https://github.com/Adii2202/MediLocker/assets/131331573/01ca3ca8-3fa9-4339-9273-e21380988f0a) MediLocker
+<div style="text-align:center;">
+  <img src="https://github.com/Adii2202/MediLocker/assets/131331573/01ca3ca8-3fa9-4339-9273-e21380988f0a" alt="Medblock Logo">
+</div>
+
+# MediLocker
 
 
 ## Description
