@@ -13,7 +13,9 @@ app = Flask(__name__)
 
 CORS(app)
 
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = get_key(key_to_get="HUGGINGFACEHUB_API_KEY",dotenv_path=".env")
+api_token = "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"
+
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = api_token
 
 llm = HuggingFaceHub(
     repo_id="mistralai/Mixtral-8x7B-Instruct-v0.1",
@@ -25,12 +27,17 @@ llm = HuggingFaceHub(
         "repetition_penalty": 1.03,
     },
 )
+
+@app.route('/',methods=["GET"])
+def home():
+    return jsonify({"message": "Welcome to MediLocker ChatBot"})
+
 def chatwithbot(txt:str):
     chat_model = ChatHuggingFace(llm=llm)
     user_template= PromptTemplate(template="{user_input}", input_variables=["user_input"])
     messages = [
     HumanMessage(content="..."),
-    AIMessage(content="You're a helpful muli lingual financial assistant, user asks their query and you have to respond accuretly and strictly in same language."),
+    AIMessage(content="You're a helpful Medical assistant, user asks their query and you have to respond accurately and strictly in same language. Give short responses that are to the point"),
     HumanMessage(content=user_template.format(user_input=txt)),
     ]
     res = chat_model(messages).content
@@ -41,11 +48,12 @@ def chatwithbot(txt:str):
 def chat():
     try:
         txt = request.form['text']
+        print(f"txt: {txt}")
         res = chatwithbot(txt)
         res = str(res)
         last_inst_index = res.rfind("[/INST]")
         res = res[last_inst_index + len("[/INST]"):].strip()
-        print(res)
+        # print(res)
         return jsonify(res)
     except Exception as e:
         return jsonify({"error": str(e)})

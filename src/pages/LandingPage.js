@@ -73,7 +73,7 @@ const LandingPage = () => {
       )}
       <NavbarContainer>
         <Logo />
-        <AppName>MedBlock</AppName>
+        <AppName>MediLocker</AppName>
         <Home onClick={() => history.push("/home")}>
           Home
           <BlueLine />
@@ -146,7 +146,7 @@ const LandingPage = () => {
             </ImageAndTextContainer>
           </SubContainer5>
         </SubContainer4>
-        <LoginText>Login To MedBlock</LoginText>
+        <LoginText>Login To MediLocker</LoginText>
         <LoginFlex>
           <LoginContainer onClick={() => history.push("/login/patient")}>
             <LoginImage src={PatientLoginIllustration} />
@@ -165,7 +165,7 @@ const LandingPage = () => {
             <LoginButton style={{ width: "90%" }}>View AnyRecords</LoginButton>
           </LoginContainer>
         </LoginFlex>
-        <Footer>&copy;MedBlock</Footer>
+        <Footer>&copy;MediLocker</Footer>
       </SubContainer1>
     </Container>
   );
