@@ -13,26 +13,10 @@ DEFAULT_MODEL_SIZE = "medium"
 app = Flask(__name__)
 ai_assistant = AIVoiceAssistant()
 
-def is_silence(data, max_amplitude_threshold=3000):
-    """Check if audio data contains silence."""
-    max_amplitude = np.max(np.abs(data))
-    return max_amplitude <= max_amplitude_threshold
-
-def transcribe_audio(model, file_path):
-    segments, info = model.transcribe(file_path, beam_size=7)
-    transcription = ' '.join(segment.text for segment in segments)
-    return transcription
-
 @app.route('/transcribe', methods=['POST'])
 def transcribe():
-    # Initialize Whisper model
-    model_size = DEFAULT_MODEL_SIZE + ".en"
-    model = WhisperModel(model_size, device="cuda", compute_type="float16", num_workers=10)
-    
-    # Get prompt from request JSON
     prompt = request.json['prompt']
     
-    # Process customer input and get response from AI assistant
     output = ai_assistant.interact_with_llm(prompt)
     
     if output:
