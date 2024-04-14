@@ -13,7 +13,7 @@ DEFAULT_MODEL_SIZE = "medium"
 app = Flask(__name__)
 ai_assistant = AIVoiceAssistant()
 
-@app.route('/transcribe', methods=['POST'])
+@app.route('/rag', methods=['POST'])
 def transcribe():
     prompt = request.json['prompt']
     
