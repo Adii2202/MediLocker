@@ -1,9 +1,4 @@
-<div style="text-align:center;">
-  <img src="https://github.com/Adii2202/MediLocker/assets/131331573/01ca3ca8-3fa9-4339-9273-e21380988f0a" alt="Medblock Logo">
-</div>
-
-# MediLocker
-
+# ![MedblockLogo](https://github.com/Adii2202/MediLocker/assets/131331573/01ca3ca8-3fa9-4339-9273-e21380988f0a) MediLocker
 
 ## Description
 MediLocker is a cutting-edge platform designed to securely store medical records on the blockchain. By harnessing the power of blockchain technology, MediLocker ensures the integrity, confidentiality, and accessibility of medical data, providing both patients and healthcare providers with a reliable and tamper-proof solution for managing health information. The platform facilitates communication between patients and healthcare professionals, allowing for real-time query resolution and doubt clarification.
