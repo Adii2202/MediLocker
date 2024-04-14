@@ -73,7 +73,7 @@ const About = () => {
           <div className="col-sm-8">
             <br />
             <br />
-            <h2>Medblock</h2>
+            <h2>MediLocker</h2>
             <br />
             <h4>
               A <b>Decentralised platform</b> to store patient’s medical records
@@ -278,7 +278,7 @@ const About = () => {
         <p>
           GitHub Repo{" "}
           <a
-            href="https://github.com/code-squads/medblock"
+            href="https://github.com/Adii2202/MediLocker"
             title="Contribute to Medblock"
             rel="noreferrer"
             target="_blank"

@@ -27,7 +27,7 @@ const CustomNavbar = () => {
             width="30"
             className="d-inline-block align-top"
           />{" "}
-          &nbsp; MedBlock
+          &nbsp; MediLocker
         </Navbar.Brand>
 
         <Navbar.Toggle />
