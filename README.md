@@ -1,5 +1,7 @@
 # MediLocker
 
+![MediLocker Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Medical_logo.svg/1200px-Medical_logo.svg.png)
+
 ## Description
 MediLocker is a cutting-edge platform designed to securely store medical records on the blockchain. By harnessing the power of blockchain technology, MediLocker ensures the integrity, confidentiality, and accessibility of medical data, providing both patients and healthcare providers with a reliable and tamper-proof solution for managing health information. The platform facilitates communication between patients and healthcare professionals, allowing for real-time query resolution and doubt clarification.
 
