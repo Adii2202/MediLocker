@@ -13,6 +13,8 @@ MediLocker is a secure platform that enables users to store their medical record
 
 - **Accessibility**: Access medical records anytime, anywhere, with permissioned access for patients and authorized healthcare professionals.
 
+- **Real Time query resolution**: Integrated Chat bot and RAG model to address all the queries.
+
 - **Tamper-Proof**: Leverage blockchain technology to create an immutable audit trail of medical data, reducing the risk of data tampering or unauthorized changes.
 
 ## Technologies Used
