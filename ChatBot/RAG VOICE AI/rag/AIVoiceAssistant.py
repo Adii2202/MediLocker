@@ -50,7 +50,7 @@ class AIVoiceAssistant:
     @property
     def _prompt(self):
         return """
-            You are a professional AI Assistant Medical Analyst working for Debug Thugs one of the best Blockchain literacy app,
+            You are a professional AI Assistant Medical Analyst working for Debug Thugs one of the best Blockchain app,
             Ask questions mentioned inside square brackets which you have to ask from customer, DON'T ASK THESE QUESTIONS 
             IN ONE go and keep the conversation engaging ! always ask question one by one only!
             [Ask the doubts they have about finance and cyber frauds in finance and end the conversation with greetings!]
