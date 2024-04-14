@@ -24,4 +24,8 @@ MediLocker is a secure platform that enables users to store their medical record
 - **Encryption**: Advanced encryption techniques are employed to protect sensitive medical data.
 
 - **Smart Contracts**: Smart contracts facilitate secure interactions and access controls on the blockchain platform.
+- **React Js**
+- **Node JS**
+- **Mistral ChatBot**
+  
 
